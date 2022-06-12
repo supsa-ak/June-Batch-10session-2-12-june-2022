@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+
+    <link rel="stylesheet" href="/June-Batch-10session-2-12-june-2022/style.css">
+
+    <style>
+        form{
+            width: 50vw;
+            margin-left: 43vw;
+        }
+
+        input{
+            width: 150px;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 3px;
+        }
+
+        button{
+            color: blue;
+            padding: 10px;
+            background-color:gold;
+            border-radius: 3px;
+        }
+
+        #message{
+            width: 100%;
+            text-align: center;
+            font-size: x-large;
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+    <nav class="display-flex">
+        <a href="/June-Batch-10session-2-12-june-2022">
+            <img id="logo-header" src="/June-Batch-10session-2-12-june-2022/logo.png" alt="logo image">
+        </a>
+        <ul class="display-flex">
+            <li><a href="/June-Batch-10session-2-12-june-2022">Home</a></li>
+            <li><a href="/June-Batch-10session-2-12-june-2022/pages/about.html">About</a></li>
+            <li><a href="/June-Batch-10session-2-12-june-2022/pages/contact.html">Contact</a></li>
+            <li><a href="/June-Batch-10session-2-12-june-2022/pages/product.html">Products</a></li>
+        </ul>
+    </nav>
+
+    <div id="content">
+       <h1>Fill the below form to contact us</h1>
+       <p id="message">Form Submitted Successfully!!</p>
+       <form onsubmit="submitForm(event)">
+            <label for="name">Name:</label>
+            <input required type="text" placeholder="Enter your name" id="name">
+            <br>
+            <label for="email">Email:</label>
+            <input required type="email" placeholder="Enter your email" id="email">
+            <br> 
+            <label for="phone">Phone:</label>
+            <input required type="number" placeholder="Enter your phone" id="phone">
+            <br>
+            <button type="submit">Submit</button>
+       </form>
+    </div>
+
+    <footer>
+        <p>Copyright &copy; 2022 Shoppping Website</p>
+    </footer>
+
+    <script>
+        function submitForm(event){
+            event.preventDefault();
+            document.getElementById('message').style.display = "block";
+        }
+    </script>
+</body>
+</html>
